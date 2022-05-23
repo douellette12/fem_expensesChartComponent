@@ -16,5 +16,5 @@
 .prettierignore
 
 
-../node_modules
+/node_modules
 style-guide.md

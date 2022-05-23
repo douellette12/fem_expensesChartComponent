@@ -65,3 +65,10 @@ html, body {
     font-size: 27px;
     font-weight: 700;
 }
+
+.trend__graph {
+    display: flex;
+    justify-content: space-evenly;
+    width: 14.3%;
+    background-color: ;
+}
