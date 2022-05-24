@@ -18,7 +18,7 @@
 
 html, body {
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
     background-color: var(--v-pale-orange);
     height: 100vh;
@@ -26,7 +26,7 @@ html, body {
 }
 
 .app {
-    width: 25%;
+    width: 30%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,31 +44,150 @@ html, body {
 
 .balance__amount {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 3rem;
     margin-top: 5px;
 }
 .balance__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.8rem;
 }
 
 .trend {
     background-color: #fff;
-    height: 400px;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-    padding: 20px 30px;
+    padding: 30px 30px;
 }
-.trend p {
+.trend h1 {
     color: var(--d-brown);
-    font-size: 27px;
+    font-size: 2.7rem;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .trend__graph {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-end;
+    height: 160px;
+}
+
+.trend__graph-bar {
     width: 14.3%;
-    background-color: ;
+    background-color: var(--s-red);
+    margin-right: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.trend__amount-tag {
+    padding: 4px 3px;
+    width: 120%;
+    background-color: var(--d-brown);
+    color: #fff;
+    position: absolute;
+    top: -35px;
+    left: -5px;
+    text-align: center;
+    border-radius: 5px;
+    visibility: hidden;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.trend__amount-tag--visible{
+    visibility: visible;
+    cursor: auto;
+}
+
+.trend__graph-bar:hover {
+    background-color: hsl(10, 79%, 72%);
+    cursor: pointer;
+}
+
+.trend__graph-bar:nth-child(7) {
+    margin-right: 0;
+}
+.trend__graph-bar:nth-child(3) {
+    background-color: var(--cyan);
+}
+
+.trend__graph-bar:nth-child(3):hover {
+    background-color: hsl(187, 45%, 79%);
+}
+
+.trend__dow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.trend__dow-text {
+    color: var(--m-d-brown);
+    width: 14.3%;
+    font-size: 1.4rem;
+    margin-right: 20px;
+    text-align: center;
+}
+.trend__dow-text:nth-child(7) {
+    margin-right: 0;
+}
+
+hr {
+    margin: 35px 0 35px 0;
+    border: 1px solid var(--cream);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__header {
+    font-size: 1.4rem;
+    color: var(--m-d-brown);
+}
+.total__amount {
+    font-size: 4rem;
+    color: var(--d-brown);
+    font-weight: 700;
+}
+
+.total__trend {
+    color: var(--d-brown);
+    text-align: end;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.total__trend-label {
+    color: var(--m-d-brown);
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1200px) {
+    .app {
+        width: 50%;
+    }
+}
+@media (max-width: 900px) {
+    .app {
+        width: 75%;
+    }
+}
+
+@media (max-width: 600px) {
+    .app {
+        width: 90%;
+    }
+    .trend h1 {
+        font-size: 2.4rem;
+    }
+    .total__amount {
+        font-size: 3rem;
+    }
+    .trend__amount-tag {
+        font-size: 1rem;
+        top: -28px;
+        left: -3px;
+    }
 }
